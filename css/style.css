@@ -1,0 +1,95 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    width: 100%;
+    height: 100vh;
+    background: url(../img/food\ background1.jpg) no-repeat;
+    background-size: cover;
+}
+.overlay{
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.244);
+}
+h1{
+    position: absolute;
+    top: 30px;
+    left: 50%;
+    transform: translateX(-50%);
+    color: #FFC727;
+    font-family: 'Lobster Two', cursive;
+    font-size: 50px;
+}
+ul li a{
+    text-decoration: none;
+    color: black;
+    font-size: 22px;
+    display: block;
+    position: relative;
+}
+ul li{
+    height: 32px;
+    list-style: none;
+    margin: 50px 20px;
+    background-color: #FFC727;
+    width: 150px;
+    border-radius: 15px;
+    position: relative;
+    transition: 1s;
+    text-align: center ;
+}
+
+.nav{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    /* justify-content: center; */
+}
+.arrow{
+    width: 0;
+    height: 0;
+    border: 10px solid #FFC727;
+    border-top: 10px solid transparent;
+    border-right: 10px solid transparent;
+    border-bottom: 10px solid transparent;
+    /* display: inline; */
+    /* float: right; */
+    position: absolute;
+    top: 50%;
+    left: 100%;
+    transform: translate(-60%,-50%);
+    /* transform: rotate(45deg); */
+}
+ul li:hover {
+    transform: scale(1.2);
+    background-color: aquamarine;
+    opacity: 1 !important;
+}
+ul:hover li {
+    opacity: 0;
+}
+ul li::after{
+    content: attr(data-text);
+    white-space: pre-line;
+    width: 600px;
+    height: 100px;
+    background-color: aquamarine;
+    position: absolute;
+    top: 0;
+    left: 200px;
+    opacity: 0;
+    pointer-events: none;
+    transition: 1s;
+    border-radius: 15px;
+    padding: 10px;
+    text-align: justify;
+    font-size: 18px;
+
+}
+ul li:hover:after{
+    opacity: 1 !important;
+}
